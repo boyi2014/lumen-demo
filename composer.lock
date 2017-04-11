@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b86e6957a0a2ba1fc6cfa6b2d2952764",
+    "content-hash": "7596a660f4a98c7628701eb56269aa83",
     "packages": [
         {
             "name": "angejia/pea",

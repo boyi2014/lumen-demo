@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Models\Providers;
+namespace MaiMeng\EloquentCache\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use App\Models\Contracts\IMeta;
-use App\Models\Common\RedisMeta;
+use MaiMeng\EloquentCache\Contracts\IMeta;
+use MaiMeng\EloquentCache\Common\RedisMeta;
 
-use App\Models\Contracts\ICache;
-use App\Models\Common\RedisCache;
+use MaiMeng\EloquentCache\Contracts\ICache;
+use MaiMeng\EloquentCache\Common\RedisCache;
 
 class EloquentCacheProvider extends ServiceProvider
 {

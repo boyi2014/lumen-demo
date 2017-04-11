@@ -8,7 +8,8 @@ use Laravel\Lumen\Auth\Authorizable;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 
-use App\Models\Common\BaseModel;
+use MaiMeng\EloquentCache\Common\BaseModel;
+
 use Lsxiao\JWT\Contracts\IClaimProvider;
 use Illuminate\Support\Facades\Hash;
 
@@ -35,13 +36,6 @@ class User extends BaseModel implements  AuthenticatableContract, AuthorizableCo
     protected $hidden = [
         'password', 'deleted_at'
     ];
-    
-    protected $id;
-    public function setId( $id )
-    {
-    	$this->id = $id;
-    	return $this;
-    }
     
     /* 
     public function getTable()

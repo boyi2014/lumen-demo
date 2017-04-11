@@ -1,5 +1,5 @@
 <?php 
-namespace App\Models\Common;
+namespace MaiMeng\EloquentCache\Common;
 
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Query\Grammars\Grammar;
@@ -10,9 +10,9 @@ use Illuminate\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Database\Query\Expression;
 
-use App\Models\Contracts\ICache;
-use App\Models\Contracts\IMeta;
-use App\Models\Common\BaseModel;
+use MaiMeng\EloquentCache\Contracts\ICache;
+use MaiMeng\EloquentCache\Contracts\IMeta;
+use MaiMeng\EloquentCache\Common\BaseModel;
 
 class QueryBuilder extends Builder
 {

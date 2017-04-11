@@ -1,10 +1,10 @@
 <?php 
-namespace App\Models\Common;
+namespace MaiMeng\EloquentCache\Common;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\Builder;
 
-use App\Models\Common\QueryBuilder;
+use MaiMeng\EloquentCache\Common\QueryBuilder;
 
 abstract class BaseModel extends EloquentModel
 {

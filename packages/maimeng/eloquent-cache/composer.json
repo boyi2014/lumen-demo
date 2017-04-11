@@ -1,0 +1,32 @@
+{
+    "name": "maimeng/eloquent-cache",
+    "description": "The Laravel Lumen Framework.",
+	"authors": [
+        {
+            "name": "cao",
+            "email": "riz.caoyi@163.com"
+        }
+    ],
+    "keywords": [
+        "lumen",
+        "laravel",
+        "eloquent cache"
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/lumen-framework": "5.4.*",
+        "vlucas/phpdotenv": "~2.2",
+        "predis/predis": "^1.1",
+        "illuminate/redis": "^5.4"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "phpunit/phpunit": "~5.0",
+        "mockery/mockery": "~0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "MaiMeng\\EloquentCache\\": "src"
+        }
+    }
+}

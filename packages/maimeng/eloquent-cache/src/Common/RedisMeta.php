@@ -1,7 +1,7 @@
 <?php 
-namespace App\Models\Common;
+namespace MaiMeng\EloquentCache\Common;
 
-use App\Models\Contracts\IMeta;
+use MaiMeng\EloquentCache\Contracts\IMeta;
 use Illuminate\Contracts\Redis\Factory as Redis;
 
 class RedisMeta implements IMeta

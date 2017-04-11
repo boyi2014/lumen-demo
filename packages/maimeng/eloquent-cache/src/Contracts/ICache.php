@@ -1,4 +1,4 @@
-<?php namespace App\Models\Contracts;
+<?php namespace MaiMeng\EloquentCache\Contracts;
 
 interface ICache
 {

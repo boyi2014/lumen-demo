@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Common\BaseModel;
+use MaiMeng\EloquentCache\Common\BaseModel;
 
 class UserScore extends BaseModel 
 {

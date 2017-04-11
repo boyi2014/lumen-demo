@@ -121,7 +121,8 @@ $app->register(Illuminate\Redis\RedisServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
 //Laravel Eloquent 的缓存层。
-$app->register(App\Models\Providers\EloquentCacheProvider::class);
+// $app->register(App\Models\Providers\EloquentCacheProvider::class);
+$app->register(MaiMeng\EloquentCache\Providers\EloquentCacheProvider::class);
 
 /*
 |--------------------------------------------------------------------------

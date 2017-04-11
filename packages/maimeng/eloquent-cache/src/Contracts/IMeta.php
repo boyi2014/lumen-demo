@@ -1,5 +1,5 @@
 <?php 
-namespace App\Models\Contracts;
+namespace MaiMeng\EloquentCache\Contracts;
 
 interface IMeta
 {

@@ -1,7 +1,7 @@
 <?php 
-namespace App\Models\Common;
+namespace MaiMeng\EloquentCache\Common;
 
-use App\Models\Contracts\ICache;
+use MaiMeng\EloquentCache\Contracts\ICache;
 
 use Illuminate\Contracts\Redis\Factory as Redis;
 
