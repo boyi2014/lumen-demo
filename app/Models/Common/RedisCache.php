@@ -1,0 +1,53 @@
+<?php 
+namespace App\Models\Common;
+
+use App\Models\Contracts\ICache;
+
+use Illuminate\Contracts\Redis\Factory as Redis;
+
+class RedisCache implements ICache
+{
+	private $redis;
+	
+	public function __construct( Redis $redis )
+	{
+		$this->redis = $redis;
+	}
+	
+    public function get($keys)
+    {
+        if (!$keys) {
+            return [];
+        }
+
+        $keyValue = array_combine($keys, $this->redis->mget($keys));
+        array_walk($keyValue, function (&$item) {
+            $item = json_decode($item);
+        });
+        
+        $keyValue = array_filter($keyValue, function ($value) {
+            return !is_null($value);
+        });
+
+        return $keyValue;
+    }
+
+    public function set($keyValue)
+    {
+        $pipe = $this->redis->pipeline();
+
+        foreach ($keyValue as $key => $value) {
+            if (!is_null($value)) {
+                $value = json_encode($value);
+                $pipe->setex($key, 86400, $value); // 缓存 1 天
+            }
+        }
+
+        return $pipe->execute();
+    }
+
+    public function del($keys)
+    {
+        return $this->redis->del($keys);
+    }
+}
